@@ -12,7 +12,7 @@ int main()
 	int x = 0;
 	int a; //  holds inputs
 	int b; // holds inputs
-	while (x <= 4)
+	while (x <= 6)
 	{
 		x = start();
 		if (x == 1) {
@@ -45,6 +45,20 @@ int main()
 			cout << "Enter Value two" << endl;
 			cin >> b;
 			cout << "Your Answer is:" << a / b << endl;
+			Sleep(1000);
+		}
+		if (x == 5) {
+			cout << "Enter Value to be square rooted" << endl;
+			cin >> a;
+			cout << "Your Answer is:" << std::sqrt(a) << endl;
+			Sleep(1000);
+		}
+		if (x == 6) {
+			cout << "Enter Value" << endl;
+			cin >> a;
+			cout << "Enter the value of what power you wish to do" << endl;
+			cin >> b; 
+			cout << "Your Answer is:" << std::pow(a,b) << endl;
 			Sleep(1000);
 		}
 	}
