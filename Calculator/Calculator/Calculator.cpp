@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include <Windows.h>
-int start();
+#include "functions.h"
 int main()
 {
 	using std::cout;
