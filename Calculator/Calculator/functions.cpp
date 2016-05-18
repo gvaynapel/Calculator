@@ -20,3 +20,9 @@ int start() {
 	system("CLS");
 	return a;
 }
+int readnumber() {
+	std::cout << "Enter a number:";
+	int x;
+	std::cin >> x;
+	return x;
+}
