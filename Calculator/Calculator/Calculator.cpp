@@ -10,7 +10,7 @@ int main()
 	cout << "Welcome to My Calculator App! (V.1)" << endl;
 	Sleep(1000);
 	int x(0);
-	int a, b; // Holds inputs
+	float a, b; // Holds inputs
 	while (x <= 6)
 	{
 		x = start();
