@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include <iostream>
+#include "functions.h"
 int start() {
 	using std::cout;
 	using std::endl;
@@ -14,15 +15,20 @@ int start() {
 	cout << "| 4|  Divide                                       |" << endl;
 	cout << "| 5|  Square Root                                  |" << endl;
 	cout << "| 6|  Take something to the Power of something     |" << endl;
-	cout << "| 7|  Exit                                         |" << endl;
+	cout << "| 7|  Factorial                                    |" << endl;
+	cout << "| 8|  Exit                                         |" << endl;
 	cout << "|--------------------------------------------------|" << endl;
 	cin >> a;
 	system("CLS");
 	return a;
 }
-int readnumber() {
+float readnumber() {
 	std::cout << "Enter a number:";
-	int x;
+	float x;
 	std::cin >> x;
 	return x;
+}
+unsigned long long factorial(unsigned long long a)
+{
+	return (a == 1 || a == 0) ? 1 : factorial(a - 1) * a;
 }

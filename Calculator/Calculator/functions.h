@@ -3,5 +3,6 @@
 #define FUNCTIONS_H
 
 int start();
-int readnumber();
+float readnumber();
+unsigned long long factorial(unsigned long long a);
 #endif // !FUNCTIONS_H
