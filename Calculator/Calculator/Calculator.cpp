@@ -11,7 +11,7 @@ int main()
 	Sleep(1000);
 	int x(0);
 	float a, b; // Holds inputs
-	while (x <= 7)
+	while (x != 8)
 	{
 		x = start();
 		if (x == 1) {
@@ -46,10 +46,9 @@ int main()
 		if (x == 6) {
 			a = readnumber();
 			b = readnumber();
-			cout << "Your Answer is:" << std::pow(a,b) << endl;
+			cout << "Your Answer is:" << std::pow(a, b) << endl;
 			Sleep(3000);
 		}
-// WIP FACTORIAL
 		if (x == 7) {
 			unsigned long long c; // this is needed to convert from a float to an int!
 			a = readnumber();
@@ -57,7 +56,14 @@ int main()
 			cout << "Your Answer is:" << factorial(c) << endl;
 			Sleep(3000);
 		}
+
+		if (x > 8 || cin.fail()) {
+			cout << "Error Invalid input :)" << endl;
+			Sleep(2000);
+			x = NULL;
+		}
 // WIP FAIL SAFE if value is greater then allowed or a string 
+
 	}
 	return 0;
 }
