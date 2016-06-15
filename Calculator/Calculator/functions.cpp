@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include <iostream>
+#include <Windows.h>
 #include "functions.h"
 int start() {
 	using std::cout;
@@ -19,6 +20,21 @@ int start() {
 	cout << "| 8|  Exit                                         |" << endl;
 	cout << "|--------------------------------------------------|" << endl;
 	cin >> a;
+
+	while (cin.fail()) // Error Correction if it is not a interger
+	{
+			system("CLS");
+			cout << "Error Input invalid :)" << endl;
+			cin.clear();
+			cin.ignore(256, '\n');
+			Sleep(2000);
+	}
+
+	if (a > 8) { // Error Correction if it is to big :)
+		system("CLS");
+		cout << "Error Input invalid :)" << endl;
+		Sleep(2000);
+	}
 	system("CLS");
 	return a;
 }

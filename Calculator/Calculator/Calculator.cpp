@@ -53,15 +53,17 @@ int main()
 			unsigned long long c; // this is needed to convert from a float to an int!
 			a = readnumber();
 			c = a; // convert float a to c
-			cout << "Your Answer is:" << factorial(c) << endl;
+			if (c <= 65) {
+				cout << "Your Answer is:" << factorial(c) << endl;
+			}
+			else
+			{
+				cout << "your input was to big try again.(Max 65)" << endl;
+			}
 			Sleep(3000);
 		}
 
-		if (x > 8) {
-			cout << "Error Invalid input :)" << endl;
-			Sleep(2000);
-			x = NULL;
-		}
+
 // WIP FAIL SAFE if value is greater then allowed or a string 
 
 	}
