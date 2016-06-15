@@ -62,10 +62,6 @@ int main()
 			}
 			Sleep(3000);
 		}
-
-
-// WIP FAIL SAFE if value is greater then allowed or a string 
-
 	}
 	return 0;
 }

@@ -26,7 +26,7 @@ int start() {
 			system("CLS");
 			cout << "Error Input invalid :)" << endl;
 			cin.clear();
-			cin.ignore(256, '\n');
+			cin.ignore(1000, '\n');
 			Sleep(2000);
 	}
 
