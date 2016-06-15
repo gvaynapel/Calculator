@@ -57,7 +57,7 @@ int main()
 			Sleep(3000);
 		}
 
-		if (x > 8 || cin.fail()) {
+		if (x > 8) {
 			cout << "Error Invalid input :)" << endl;
 			Sleep(2000);
 			x = NULL;
