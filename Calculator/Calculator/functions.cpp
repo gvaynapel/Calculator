@@ -38,11 +38,16 @@ int start() {
 	system("CLS");
 	return a;
 }
-float readnumber() {
+
+float readnumber() { // take inputes and return them!
 	std::cout << "Enter a number:";
 	float x;
 	std::cin >> x;
 	return x;
+}
+float long power(float long c, float long d)
+{
+	return(std::pow(c, d));
 }
 unsigned long long factorial(unsigned long long a)
 {

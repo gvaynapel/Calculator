@@ -44,9 +44,11 @@ int main()
 			Sleep(3000);
 		}
 		if (x == 6) {
+			float long a;
+			float long b;
 			a = readnumber();
 			b = readnumber();
-			cout << "Your Answer is:" << std::pow(a, b) << endl;
+			cout << "Your Answer is:" << power(a, b) << endl;
 			Sleep(3000);
 		}
 		if (x == 7) {
