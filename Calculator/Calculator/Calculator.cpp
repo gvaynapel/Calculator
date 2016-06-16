@@ -44,8 +44,8 @@ int main()
 			Sleep(3000);
 		}
 		if (x == 6) {
-			float long a;
-			float long b;
+		    double a;
+		    double b;
 			a = readnumber();
 			b = readnumber();
 			cout << "Your Answer is:" << power(a, b) << endl;
@@ -60,7 +60,9 @@ int main()
 			}
 			else
 			{
-				cout << "your input was to big try again.(Max 65)" << endl;
+				std::string custom;
+				custom = "(Max Input of 65)";
+				numfail(custom);
 			}
 			Sleep(3000);
 		}

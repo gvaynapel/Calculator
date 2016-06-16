@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include <Windows.h>
+#include <string>
 #include "functions.h"
 int start() {
 	using std::cout;
@@ -21,19 +22,14 @@ int start() {
 	cout << "|--------------------------------------------------|" << endl;
 	cin >> a;
 
-	while (cin.fail()) // Error Correction if it is not a interger
+	if (cin.fail()) // Error Correction if it is not a interger
 	{
-			system("CLS");
-			cout << "Error Input invalid :)" << endl;
-			cin.clear();
-			cin.ignore(1000, '\n');
-			Sleep(2000);
+		fail();
 	}
 
-	if (a > 8) { // Error Correction if it is to big :)
-		system("CLS");
-		cout << "Error Input invalid :)" << endl;
-		Sleep(2000);
+	else if (a > 8) { // Error Correction if it is to big :)
+		std::string custommsg;
+		numfail(custommsg);
 	}
 	system("CLS");
 	return a;
@@ -43,13 +39,32 @@ float readnumber() { // take inputes and return them!
 	std::cout << "Enter a number:";
 	float x;
 	std::cin >> x;
+	if (std::cin.fail()){
+		fail();
+		std::cout << "Enter a number:";
+		std::cin >> x;
+	}
 	return x;
 }
-float long power(float long c, float long d)
+double power(double c,double d)
 {
 	return(std::pow(c, d));
 }
 unsigned long long factorial(unsigned long long a)
 {
 	return (a == 1 || a == 0) ? 1 : factorial(a - 1) * a;
+}
+void fail() { // Handles inputs that arent intergers
+	system("CLS");
+	std::cout << "Error Input invalid" << std::endl;
+	std::cin.clear();
+	std::cin.ignore(1000, '\n');
+	Sleep(2000);
+	system("CLS");
+}
+void numfail(std::string custommsg) { // numbers/other to massive or incorrect
+	system("CLS");
+	std::cout << "Error Input invalid"  << custommsg << std::endl;
+	Sleep(2000);
+	system("CLS");
 }

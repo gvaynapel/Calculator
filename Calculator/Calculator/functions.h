@@ -4,6 +4,8 @@
 
 int start();
 float readnumber();
-float long power(float long c, float long d);
+double power(double c,double d);
 unsigned long long factorial(unsigned long long a);
+void fail(); // cin.fail() error handeler
+void numfail(std::string custommsg); // interger error catching
 #endif // !FUNCTIONS_H
